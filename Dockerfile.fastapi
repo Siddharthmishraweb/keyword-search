@@ -1,0 +1,9 @@
+FROM tiangolo/uvicorn-gunicorn-fastapi:python3.9
+
+RUN pip install pymongo
+
+
+COPY ./app.py /app
+
+COPY ./patent_jsons /app/patent_jsons
+
